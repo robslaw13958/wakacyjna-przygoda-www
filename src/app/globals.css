@@ -22,6 +22,131 @@
   }
 } */
 
+/*
+
+:root {
+  --logo-blue: #03ACC0;
+  --logo-yellow: #FDC033;
+  --logo-text: #2C2C2A;
+
+  --logo-blue-dark: #026773;
+  --logo-yellow-dark: #B68002;
+  --logo-text-dark: #1B1B19;
+
+  --logo-blue-light: #06E3FB;
+  --logo-yellow-light: #FDCD5D;
+  --logo-text-light: #575754;
+  
+  --background: #f5f5f4;
+  --foreground: var(--logo-text);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 158px;
+}
+
+// Enable hover only on non-touch devices
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+
+  .main ol {
+    text-align: center;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctas a {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  a.secondary {
+    min-width: auto;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .photoAndText1 {
+    flex-direction: column;
+  }
+  
+  .photoAndText2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .photoAndText3 {
+    height: auto;
+  }
+  
+  .photo3 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .text3 {
+    position: relative;
+    width: 100%;
+    transform: none;
+    margin-top: -40px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+}
+
+
+*/
+
 html,
 body {
   max-width: 100vw;
