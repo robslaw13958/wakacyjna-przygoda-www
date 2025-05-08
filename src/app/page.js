@@ -14,8 +14,6 @@ export default function Home() {
           <li><a href="#planujesz_impreze" className={activeSection === 'planujesz_impreze' ? styles.active : ''}>Planujesz imprezę?</a></li>
           <li><a href="#namioty" className={activeSection === 'namioty' ? styles.active : ''}>Namioty</a></li>
           <li><a href="#dmuchance" className={activeSection === 'dmuchance' ? styles.active : ''}>Dmuchańce</a></li>
-          <li><a href="#galeria" className={activeSection === 'galeria' ? styles.active : ''}>Oferta</a></li>
-          <li><a href="#kontakt" className={activeSection === 'kontakt' ? styles.active : ''}>Kontakt</a></li>
         </ul>
         <img src="./Wakacyjna_przygoda.svg" alt="Logo Wakacyjna przygoda" />
       </nav>
@@ -32,10 +30,7 @@ export default function Home() {
           <p>Zapewniamy wynajem namiotów cateringowych wraz z pełnym wyposażeniem dla 20 do 200 osób!
             <br />Oferujemy profesjonalną obsługę, nowoczesny sprzęt z 2024 i 2025 roku oraz niezapomniane atrakcje na każdą okazję.</p>
           <p>📅 Zapraszamy do rezerwacji na 2025 rok</p>
-          <p>📌 Wolne terminy na maj</p>
-          <div className={styles.ctas}>
-            <a>Zarezerwuj</a>
-          </div>
+          <p>📌 Wolne terminy na maj i czerwiec</p>
         </section>
 
         {/* SEKCJA 2 - NAMIOTY */}
@@ -51,8 +46,7 @@ export default function Home() {
                 <img src="./namiot2.jpg" alt="Namiot na przyjęcie weselne" />
               </div>
               <div className={styles.text1}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
-              </div>
+              Elegancki namiot cateringowy w klasycznym z szarym wykończeniem. Przestronna konstrukcja idealna na przyjęcia plenerowe, wesela i imprezy firmowe. Zapewnia komfortowe schronienie dla gości niezależnie od pogody.              </div>
             </div>
 
             {/* PROPOZYCJA 1 */}
@@ -61,7 +55,7 @@ export default function Home() {
                 <img src="./namiot3.jpg" alt="Namiot na przyjęcie weselne" />
               </div>
               <div className={styles.text1}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
+              Profesjonalny namiot cateringowy w białym kolorze. Łatwy i szybki montaż pozwala na organizację przyjęć w dowolnej lokalizacji. Doskonale sprawdza się podczas imprez rodzinnych i wydarzeń biznesowych
               </div>
             </div>
           </div>
@@ -99,42 +93,89 @@ export default function Home() {
               <li>✔️ Animacje</li>
             </ul>
           </div>
-          {/* PROPOZYCJA 2 */}
-          <div className={styles.photoAndText2}>
-            <div className={styles.photo2}>
-              <img src="./namiot2.jpg" alt="Namiot na przyjęcie weselne" />
-            </div>
-            <div className={styles.text2}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
-            </div>
-          </div>
-
-          {/* PROPOZYCJA 3 */}
-          <div className={styles.photoAndText3}>
-            <div className={styles.photo3}>
-              <img src="./namiot2.jpg" alt="Namiot na przyjęcie weselne" />
-            </div>
-            <div className={styles.text3}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
-            </div>
-          </div>
 
           
         </section>
 
         <section className={styles.section} id="dmuchance">
           <h2>Dmuchańce</h2>
-          <p>Wynajmujemy dmuchańce na każdą okazję. Dmuchane zamki, zjeżdżalnie, tory przeszkód, dmuchane piłkarzyki, dmuchane kręgle i wiele innych atrakcji dla dzieci i dorosłych.</p>
-          <div className={styles.ctas}>
-            <a>Zobacz ofertę</a>
-          </div>
+          <p>Wynajmujemy dmuchańce na każdą okazję. Dmuchane zamki, zjeżdżalnie, tory przeszkód, dmuchane piłkarzyki i wiele innych.</p>
+          <div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_labirynt.jpg" alt="Duży dmuchaniec Labirynt" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Labirynt</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>7x6 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>6 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>⤵</span>
+        <span className={styles.specLabel}>Półka zjazdowa:</span>
+        <span className={styles.specValue}>3.6 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Duża zjeżdżalnia z torem przeszkód. Idealna propozycja dla starszych dzieci. Emocje gwarantowane!</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_krokodyl.jpg" alt="Duży dmuchaniec Krokodyl" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Krokodyl</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>9x4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>7 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>↘</span>
+        <span className={styles.specLabel}>Półka zjazdowa:</span>
+        <span className={styles.specValue}>3.6 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Duża zjeżdżalnia w Amazońskim stylu. Klasyczna konstrukcja z dynamicznym zjazdem, który dostarczy dzieciom niezapomnianych wrażeń.</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_dzungla.jpg" alt="Średni dmuchaniec Dżungla" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Dżungla</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>7x3.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>6 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>↘</span>
+        <span className={styles.specLabel}>Półka zjazdowa:</span>
+        <span className={styles.specValue}>3.1 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Kompaktowa zjeżdżalnia w tropikalnym stylu, idealna do mniejszych przestrzeni.</p>
+  </div>
+</div>
         </section>
-        <section className={styles.section}>Sekcja 4</section>
-        <section className={styles.section}>Sekcja 5</section>
       </main>
       <footer className={styles.footer}>
         <p>Wakacyjna Przygoda &copy; 2025</p>
-        <p>Projekt i wykonanie: Robert Sławeta</p>
       </footer>
     </div>
   );
