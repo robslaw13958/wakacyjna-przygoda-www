@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/Wakacyjna_przygoda.svg" />
         <link rel="apple-touch-icon" href="/Wakacyjna_przygoda.svg" />
         <link rel="canonical" href="https://wakacyjnaprzygoda.com/" />
+        <meta name="google-site-verification" content="pBf2Fo750dBhJ2wslC--pEe77X0BIiHCkGwFoyqmQNo" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
