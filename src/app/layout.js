@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Wakacyjna Przygoda - Kompleksowa obsługa uroczystości plenerowych',
-  description: 'Profesjonalna organizacja imprez plenerowych, wynajem namiotów i dmuchańców.',
+  title: 'Wynajem namiotów i dmuchańców – Wakacyjna Przygoda',
+  description: 'Profesjonalna organizacja imprez plenerowych, wynajem namiotów i dmuchańców. Kielce i okolice. Montaż gratis, nowoczesny sprzęt – sprawdź ofertę!',
 }
 
 export default function RootLayout({ children }) {
@@ -21,6 +21,8 @@ export default function RootLayout({ children }) {
     <html lang="pl">
       <head>
         <link rel="icon" href="/Wakacyjna_przygoda.svg" />
+        <link rel="apple-touch-icon" href="/Wakacyjna_przygoda.svg" />
+        <link rel="canonical" href="https://www.wakacyjnaprzygoda.com/" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
