@@ -197,7 +197,7 @@ export default function Home() {
                   <span className={styles.specValue}>3.6 m</span>
                 </div>
               </div>
-              <p className={styles.description}>OPIS</p>
+              <p className={styles.description}>Duża zjeżdżalnia z Junglą.</p>
             </div>
           </div>
           <div className={styles.dmuchaniecContainer}>
@@ -294,7 +294,7 @@ export default function Home() {
           <div className={styles.dmuchaniecContainer}>
             <img src="./skakaniec_zoo.jpg" alt="Duży skakaniec Zoo" className={styles.dmuchaniec} />
             <div className={styles.dmuchaniecText}>
-              <h3>Dżungla</h3>
+              <h3>Skakaniec Zoo</h3>
               <div className={styles.dmuchaniecSpecs}>
                 <div className={styles.specItem}>
                   <span className={styles.specIcon}>📏</span>
