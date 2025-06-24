@@ -32,7 +32,7 @@ export default function Home() {
             <br />Oferujemy profesjonalną obsługę, nowoczesny sprzęt z 2024 i 2025 roku oraz niezapomniane atrakcje na każdą okazję.</p>
             <p>Szukasz sprawdzonej firmy, która zajmuje się wynajmem dmuchańców i namiotów w Kielcach i okolicach? Wakacyjna Przygoda to kompleksowa obsługa imprez plenerowych – od małych rodzinnych urodzin po duże eventy firmowe i festyny gminne. <br/>Oferujemy nowoczesne dmuchańce dla dzieci, namioty eventowe, akcesoria i pełną obsługę na miejscu. <br/>Obsługujemy całe woj. świętokrzyskie – Kielce, Chęciny, Morawicę, Masłów, Zagnańsk, Daleszyce i okolice.</p>
           <p>📅 Zapraszamy do rezerwacji na 2025 rok</p>
-          <p>📌 Wolne terminy na maj i czerwiec</p>
+          <p>📌 Wolne terminy na wakacje!</p>
         </section>
 
         {/* SEKCJA 2 - NAMIOTY */}
