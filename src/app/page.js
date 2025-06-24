@@ -163,7 +163,7 @@ export default function Home() {
   </div>
 </div>
 <div className={styles.dmuchaniecContainer}>
-  <img src="./dmuchaniec_junglepark.jpg" alt="Dmuchaniec Jungle Park" className={styles.dmuchaniec} />
+  <img src="./dmuchaniec_junglePark.jpg" alt="Dmuchaniec Jungle Park" className={styles.dmuchaniec} />
   <div className={styles.dmuchaniecText}>
     <h3>Jungle Park</h3>
     <div className={styles.dmuchaniecSpecs}>
