@@ -104,231 +104,152 @@ export default function Home() {
           <h2>Dmuchańce</h2>
           <p>Wynajmujemy dmuchańce na każdą okazję. Dmuchane zamki, zjeżdżalnie, tory przeszkód, dmuchane piłkarzyki i wiele innych.</p>
           <p>Dmuchańce to hit każdej imprezy dla dzieci. Nasze konstrukcje są nowe, kolorowe i bezpieczne – idealne na festyny, pikniki rodzinne, urodziny i komunie. W ofercie m.in. Dmuchaniec Labirynt, Krokodyl i Dżungla. Wszystko przywozimy, rozkładamy i odbieramy po zakończeniu zabawy. Wynajem dmuchańca w Kielcach i okolicznych miejscowościach to nasza specjalność.</p>
+          
           <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_labirynt.jpg" alt="Duży dmuchaniec Labirynt" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Labirynt</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>7x6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>⤵</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.6 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Duża zjeżdżalnia z torem przeszkód. Idealna propozycja dla starszych dzieci. Emocje gwarantowane!</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_krokodyl.jpg" alt="Duży dmuchaniec Krokodyl" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Krokodyl</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>9x4.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>7 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.6 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Duża zjeżdżalnia w Amazońskim stylu. Klasyczna konstrukcja z dynamicznym zjazdem, który dostarczy dzieciom niezapomnianych wrażeń.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_dzungla.jpg" alt="Średni dmuchaniec Dżungla" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Dżungla</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>7x3.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.1 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Kompaktowa zjeżdżalnia w tropikalnym stylu, idealna do mniejszych przestrzeni.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_junglePark.jpg" alt="Duży dmuchaniec Dżungla" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Jungle Park</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>9x4.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>7 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.6 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Duża zjeżdżalnia z Junglą.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_lego.jpg" alt="Mały dmuchaniec Lego" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Lego</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>5x5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>4 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Mała zjeżdżalnia z motywem klocków z miejscem do skakania.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_lego_duzy.jpg" alt="Duży dmuchaniec Lego" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Duże Lego</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>7x6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.1 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Duża zjeżdżalnia w klockowym stylu z miejscem do skakania oraz z przeszkodami.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_minionki.jpg" alt="Dmuchaniec z Minionkami" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Minionki</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>7x3.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.1 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Zjeżdżalnia z Minionkami.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_zoo.jpg" alt="Dmuchaniec Zoo" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Zoo</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>8.5x4.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>6.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.6 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Zjeżdżalnia z motywem Zoo.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./skakaniec_zoo.jpg" alt="Duży skakaniec Zoo" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Skakaniec Zoo</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>6x6 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Dmuchaniec do skakania z przeszkodami w motywie Zoo. Idealna propozycja jako drugi dmuchaniec dla mniejszych dzieci na imprezy prywatne.</p>
-            </div>
-          </div>
-          <div className={styles.dmuchaniecContainer}>
-            <img src="./dmuchaniec_dzungla.jpg" alt="Średni dmuchaniec Dżungla" className={styles.dmuchaniec} />
-            <div className={styles.dmuchaniecText}>
-              <h3>Dżungla</h3>
-              <div className={styles.dmuchaniecSpecs}>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>📏</span>
-                  <span className={styles.specLabel}>Wymiary:</span>
-                  <span className={styles.specValue}>7x3.5 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>🔝</span>
-                  <span className={styles.specLabel}>Wysokość:</span>
-                  <span className={styles.specValue}>6 m</span>
-                </div>
-                <div className={styles.specItem}>
-                  <span className={styles.specIcon}>↘</span>
-                  <span className={styles.specLabel}>Półka zjazdowa:</span>
-                  <span className={styles.specValue}>3.1 m</span>
-                </div>
-              </div>
-              <p className={styles.description}>Kompaktowa zjeżdżalnia w tropikalnym stylu, idealna do mniejszych przestrzeni.</p>
-            </div>
-          </div>
+  <img src="./dmuchaniec_amazonka.jpg" alt="Dmuchaniec Amazonka" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Amazonka</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>8 x 4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>6 m (zjazd 3.1 m)</span>
+      </div>
+    </div>
+    <p className={styles.description}>Kolorowa dżungla z drzewami i zwierzakami – idealna średnia zjeżdżalnia dla młodszych i starszych dzieci.</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_jungle.jpg" alt="Dmuchaniec Jungle" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Jungle</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>9 x 4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>6 m (zjazd 3.1 m)</span>
+      </div>
+    </div>
+    <p className={styles.description}>Tropikalna przygoda w sercu dżungli – zjeżdżalnia z papugami i dzikimi zwierzętami.</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_krokodyl.jpg" alt="Dmuchaniec Krokodyl" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Krokodyl</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>9 x 4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>7 m (zjazd 3.6 m)</span>
+      </div>
+    </div>
+    <p className={styles.description}>Ogromny krokodyl ze stromym ślizgiem – przyciąga wzrok i daje mnóstwo frajdy!</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_junglepark.jpg" alt="Dmuchaniec Jungle Park" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Jungle Park</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>9 x 4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>7 m (zjazd 3.6 m)</span>
+      </div>
+    </div>
+    <p className={styles.description}>Leśna przygoda z małpami i tygrysami – duży dmuchaniec pełen radości.</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_zoo.jpg" alt="Dmuchaniec Zoo" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Zoo</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>9 x 4.5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>7 m (zjazd 3.6 m)</span>
+      </div>
+    </div>
+    <p className={styles.description}>Zjeżdżalnia z całym wesołym zoo – lew, zebra i słoń czekają na zabawę!</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_lego.jpg" alt="Dmuchaniec Lego" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Lego</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>5 x 5 m</span>
+      </div>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>🔝</span>
+        <span className={styles.specLabel}>Wysokość:</span>
+        <span className={styles.specValue}>4 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Mała zjeżdżalnia z motywem klocków z miejscem do skakania. Kolorowy klasyk!</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_zoo_skok.jpg" alt="Dmuchaniec Zoo do skakania" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Zoo do skakania</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>6 x 6 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Kolorowa arena z figurkami zwierząt – świetna zabawa dla maluchów bez zjeżdżalni.</p>
+  </div>
+</div>
+<div className={styles.dmuchaniecContainer}>
+  <img src="./dmuchaniec_boisko.jpg" alt="Dmuchane boisko do piłki nożnej" className={styles.dmuchaniec} />
+  <div className={styles.dmuchaniecText}>
+    <h3>Boisko</h3>
+    <div className={styles.dmuchaniecSpecs}>
+      <div className={styles.specItem}>
+        <span className={styles.specIcon}>📏</span>
+        <span className={styles.specLabel}>Wymiary:</span>
+        <span className={styles.specValue}>6 x 11 m</span>
+      </div>
+    </div>
+    <p className={styles.description}>Dmuchane boisko do piłki nożnej – idealne jako dodatek do dmuchanej zjeżdżalni. Bezpieczna rywalizacja i dużo śmiechu!</p>
+  </div>
+</div>
+
+
+          
         </section>
       </main>
       <footer className={styles.footer} id="footer">
