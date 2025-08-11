@@ -103,7 +103,7 @@ export default function Home() {
         <section className={styles.section} id="dmuchance">
           <h2>Dmuchańce</h2>
           <p>Wynajmujemy dmuchańce na każdą okazję. Dmuchane zamki, zjeżdżalnie, tory przeszkód, dmuchane piłkarzyki i wiele innych.</p>
-          <p>Dmuchańce to hit każdej imprezy dla dzieci. Nasze konstrukcje są nowe, kolorowe i bezpieczne – idealne na festyny, pikniki rodzinne, urodziny i komunie. W ofercie m.in. Dmuchaniec Labirynt, Krokodyl i Dżungla. Wszystko przywozimy, rozkładamy i odbieramy po zakończeniu zabawy. Wynajem dmuchańca w Kielcach i okolicznych miejscowościach to nasza specjalność.</p>
+          <p>Dmuchańce to hit każdej imprezy dla dzieci. Nasze konstrukcje są nowe, kolorowe i bezpieczne – idealne na festyny, pikniki rodzinne, urodziny i komunie. W ofercie m.in. Dmuchańce w motywach Minecraft, Lego czy Dżungla. Wszystko przywozimy, rozkładamy i odbieramy po zakończeniu zabawy. Wynajem dmuchańca w Kielcach i okolicznych miejscowościach to nasza specjalność.</p>
           
           <div className={styles.dmuchaniecContainer}>
   <img src="./dmuchaniec_amazonka.jpg" alt="Dmuchaniec Amazonka" className={styles.dmuchaniec} />
@@ -163,9 +163,9 @@ export default function Home() {
   </div>
 </div>
 <div className={styles.dmuchaniecContainer}>
-  <img src="./dmuchaniec_junglepark.jpg" alt="Dmuchaniec Jungle Park" className={styles.dmuchaniec} />
+  <img src="./dmuchaniec_minecraft.jpg" alt="Dmuchaniec Minecraft" className={styles.dmuchaniec} />
   <div className={styles.dmuchaniecText}>
-    <h3>Jungle Park</h3>
+    <h3>Minecraft</h3>
     <div className={styles.dmuchaniecSpecs}>
       <div className={styles.specItem}>
         <span className={styles.specIcon}>📏</span>
@@ -178,7 +178,7 @@ export default function Home() {
         <span className={styles.specValue}>7 m (zjazd 3.6 m)</span>
       </div>
     </div>
-    <p className={styles.description}>Leśna przygoda z małpami i tygrysami – duży dmuchaniec pełen radości.</p>
+    <p className={styles.description}>Duży dmuchaniec idealny dla fanów popularnej gry z blokami.</p>
   </div>
 </div>
 <div className={styles.dmuchaniecContainer}>
@@ -263,7 +263,6 @@ export default function Home() {
           </div>
           <div className={styles.footerContent}>
             <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100083137700568" target="_blank" rel="noopener">Wakacyjna Przygoda</a></p>
-            
           </div>
         </div>
         <p>📍 Kielce, woj. Świętokrzyskie</p>
