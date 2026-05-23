@@ -44,7 +44,7 @@ const inflatables = [
   {
     id: "labirynt",
     name: "Labirynt 3w1",
-    imgs: ["./dmuchaniec_labirynt.jpeg", "./dmuchaniec_labirynt2.jpeg", "./dmuchaniec_labirynt3.jpeg"],
+    imgs: ["./dmuchaniec_labirynt.jpeg", "./dmuchaniec_labirynt2.jpeg", "./dmuchaniec_labirynt3.jpg"],
     alt: "Dmuchaniec Labirynt",
     wymiary: "7 × 6 m",
     wysokosc: "6 m (zjazd 3,1 m)",
