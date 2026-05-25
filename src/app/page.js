@@ -8,17 +8,17 @@ const tentSlides = [
   {
     img: "./namiot2.jpg",
     alt: "Namiot weselny",
-    desc: "Elegancki namiot z szarym wykończeniem — idealny na wesela i imprezy firmowe.",
+    desc: "Elegancki namiot z szarym wykończeniem, który sprawdzi się na każdą okazję",
   },
   {
     img: "./namiot3.jpg",
     alt: "Namiot biały",
-    desc: "Biały namiot cateringowy — łatwy montaż w dowolnej lokalizacji.",
+    desc: "Biały namiot cateringowy - pomieści nawet kilkadziesiąt osób, a jego neutralna stylistyka pasuje do każdej dekoracji.",
   },
   {
     img: "./namiot4.jpg",
     alt: "Namiot biały",
-    desc: "Biały namiot cateringowy — łatwy montaż w dowolnej lokalizacji.",
+    desc: "Namiot cateringowy to komfort niezależnie od pogody - daje cień, chroni przed deszczem i tworzy wyjątkowy klimat każdego przyjęcia.",
   },
 ];
 
@@ -26,17 +26,27 @@ const interiorSlides = [
   {
     img: "./wnetrze1.jpg",
     alt: "Stolik kawowy",
-    desc: "Stolik kawowy",
+    desc: "<strong>Stolik kawowy z warnikiem i zastawą</strong><br/>Czyli strefa kawowa dla Twoich gości",
   },
   {
     img: "./wnetrze2.jpg",
     alt: "Zastawa stołowa",
-    desc: "Wnętrze namiotu - stoły z zastawą",
+    desc: "<strong>Pełna opcja (obrusy, pokrowce, zastawa)</strong><br/>Wszystko, czego potrzebujesz w jednym miejscu. Stoły z obrusami, krzesła w eleganckich pokrowcach i kompletna zastawa stołowa",
   },
   {
     img: "./wnetrze3.jpg",
     alt: "Stoły bez zastawy",
-    desc: "Wersja bez zastawy",
+    desc: "<strong>Obrusy i pokrowce (bez zastawy) </strong><br/>Zadbany wygląd stołów i krzeseł bez przepłacania za zbędne dodatki",
+  },
+  {
+    img: "./wnetrze4.jpg",
+    alt: "Stoły bez obrusów",
+    desc: "<strong>Same stoły i krzesła</strong><br/>Podstawowy zestaw dla tych, którzy mają własną dekorację lub zastawę.",
+  },
+  {
+    img: "./wnetrze5.jpeg",
+    alt: "Stoły bez obrusów",
+    desc: "<strong>Same stoły i krzesła</strong><br/>Solidne stoły i wygodne krzesła - tyle, ile potrzeba, bez niczego zbędnego",
   },
 ];
 
@@ -48,7 +58,7 @@ const inflatables = [
     alt: "Dmuchaniec Labirynt",
     wymiary: "7 × 6 m",
     wysokosc: "6 m (zjazd 3,1 m)",
-    desc: "Najciekawszy dmuchaniec w ofercie. 3w1 - Zjeżdżalnia, skakaniec, tor przeszkód",
+    desc: "Najciekawszy dmuchaniec w ofercie.<br/>3w1 - Zjeżdżalnia, skakaniec i tor przeszkód w jednym",
   },
   {
     id: "torPrzeszkod",
@@ -57,7 +67,7 @@ const inflatables = [
     alt: "Dmuchaniec Tor przeszkód",
     wymiary: "12 × 3 m",
     wysokosc: null,
-    desc: "Tor przeszkód idealny na festyn.",
+    desc: "Wyzwanie dla prawdziwych śmiałków!<br/>Idealny wybór na festyn czy inną imprezę plenerową",
   },
   {
     id: "amazonka",
@@ -66,7 +76,7 @@ const inflatables = [
     alt: "Dmuchaniec Amazonka",
     wymiary: "8 × 4,5 m",
     wysokosc: "6 m (zjazd 3,1 m)",
-    desc: "Kolorowa dżungla z drzewami i zwierzakami — idealna zjeżdżalnia dla młodszych i starszych dzieci.",
+    desc: "Kolorowa dżungla z drzewami i zwierzakami<br/>Idealna zjeżdżalnia dla młodszych i starszych dzieci",
   },
   {
     id: "jungle",
@@ -75,7 +85,7 @@ const inflatables = [
     alt: "Dmuchaniec Jungle",
     wymiary: "9 × 4,5 m",
     wysokosc: "6 m (zjazd 3,1 m)",
-    desc: "Tropikalna przygoda w sercu dżungli — zjeżdżalnia z papugami i dzikimi zwierzętami.",
+    desc: "Tropikalna przygoda w sercu dżungli<br/>Zjeżdżalnia z papugami i dzikimi zwierzętami",
   },
   {
     id: "krokodyl",
@@ -84,7 +94,7 @@ const inflatables = [
     alt: "Dmuchaniec Krokodyl",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Ogromny krokodyl ze stromym ślizgiem — przyciąga wzrok i daje mnóstwo frajdy!",
+    desc: "Ogromny krokodyl ze stromym ślizgiem<br/>Przyciąga wzrok i daje mnóstwo frajdy!",
   },
   {
     id: "minecraft",
@@ -93,7 +103,7 @@ const inflatables = [
     alt: "Dmuchaniec Minecraft",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Duży dmuchaniec idealny dla fanów popularnej gry z blokami.",
+    desc: "Duży dmuchaniec idealny dla fanów popularnej gry z blokami",
   },
   {
     id: "zoo",
@@ -102,7 +112,7 @@ const inflatables = [
     alt: "Dmuchaniec Zoo",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Zjeżdżalnia z całym wesołym zoo — lew, zebra i słoń czekają na zabawę!",
+    desc: "Zjeżdżalnia z całym wesołym zoo<br/>Lew, zebra i słoń czekają na zabawę!",
   },
   {
     id: "lego",
@@ -116,11 +126,11 @@ const inflatables = [
   {
     id: "zoo_skok",
     name: "Zoo do skakania",
-    imgs: ["./dmuchaniec_zoo_skok.jpg"],
+    imgs: ["./dmuchaniec_zoo_skok.jpg","./dmuchaniec_zoo_skok2.jpeg","./dmuchaniec_zoo_skok3.jpeg"],
     alt: "Dmuchaniec Zoo do skakania",
     wymiary: "6 × 6 m",
     wysokosc: null,
-    desc: "Kolorowa arena z figurkami zwierząt — świetna zabawa dla maluchów bez zjeżdżalni.",
+    desc: "Kolorowa arena z figurkami zwierząt<br/>Świetna zabawa dla maluchów, bez zjeżdżalni",
   },
   {
     id: "boisko",
@@ -129,7 +139,7 @@ const inflatables = [
     alt: "Dmuchane boisko do piłki nożnej",
     wymiary: "6 × 11 m",
     wysokosc: null,
-    desc: "Dmuchane boisko do piłki nożnej — idealne jako dodatek do zjeżdżalni. Bezpieczna rywalizacja i dużo śmiechu!",
+    desc: "Dmuchane boisko do piłki nożnej<br/>Idealne jako dodatek do zjeżdżalni. Bezpieczna rywalizacja i dużo śmiechu!",
   },
 ];
 
@@ -185,7 +195,7 @@ export default function Home() {
         <section className={styles.section} id="planujesz_impreze">
           <h2 className={styles.headerDark}>Planujesz imprezę?</h2>
           <p>Zapewniamy wynajem namiotów cateringowych wraz z pełnym wyposażeniem dla 20 do 200 osób. Oferujemy profesjonalną obsługę, nowoczesny sprzęt z 2025 i 2026 roku oraz niezapomniane atrakcje na każdą okazję.</p>
-          <p>Obsługujemy całe woj. świętokrzyskie — Kielce, Chęciny, Morawicę, Masłów, Zagnańsk, Daleszyce i okolice. Nasz sprzęt przywozimy, montujemy i odbieramy sami.</p>
+          <p>Obsługujemy całe woj. świętokrzyskie - Kielce, Chęciny, Morawicę, Masłów, Zagnańsk, Daleszyce i okolice. Nasz sprzęt przywozimy, montujemy i odbieramy sami.</p>
           <p>📅 Zapraszamy do rezerwacji na 2026 rok &nbsp;·&nbsp; 📌 Wolne terminy na wakacje!</p>
         </section>
 
@@ -193,12 +203,12 @@ export default function Home() {
         <section className={styles.section} id="namioty">
           <h2 className={styles.header}>Namioty cateringowe</h2>
           <p>Wynajmujemy namioty cateringowe dla 20 do 200 osób. Wszystkie namioty są nowe, wykonane z materiałów najwyższej jakości, odporne na deszcz i wiatr.</p>
-          <p>Dostępne w różnych rozmiarach i konfiguracjach — z bokami lub bez, z podłogą, oświetleniem girlandowym i innymi dodatkami. Przyjeżdżamy, montujemy i odbieramy wszystko sami.</p>
+          <p>Dostępne w różnych rozmiarach i konfiguracjach - z bokami lub bez, z podłożem, oświetleniem girlandowym i innymi dodatkami. Przyjeżdżamy, montujemy i odbieramy wszystko sami.</p>
           <p className={styles.coloredText}>Montaż, demontaż oraz girlandowe oświetlenie — GRATIS</p>
 
           {/* KARUZELA NAMIOTÓW */}
-          <Carousel items={tentSlides} interval={4000} />
-          <Carousel items={interiorSlides} interval={4000} />
+          <Carousel items={tentSlides} interval={6000} />
+          <Carousel items={interiorSlides} interval={6000} />
 
           <p>Dostępne białe namioty z eleganckim szarym wykończeniem:</p>
           <ul>
@@ -229,7 +239,6 @@ export default function Home() {
               <li>Dodatkowe opcje</li>
               <li>Podłoże ze sztucznej trawy</li>
               <li>Catering</li>
-              <li>Profesjonalne nagłośnienie i oświetlenie</li>
               <li>Animacje</li>
             </ul>
           </div>
@@ -279,7 +288,10 @@ export default function Home() {
                       </span>
                     )}
                   </div>
-                  <p className={styles.dmuchaniecDesc}>{item.desc}</p>
+                  <p
+                  className={styles.dmuchaniecDesc}
+                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                  />
                 </div>
               </div>
             ))}

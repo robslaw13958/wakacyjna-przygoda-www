@@ -100,8 +100,9 @@
   text-align: center;
   padding: 0 32px;
   background-image:
-    linear-gradient(to right, var(--logo-text) 5%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, var(--logo-text) 95%),
-    linear-gradient(to bottom, var(--logo-text) 5%, rgba(64,64,64,0.35) 40%, rgba(0,0,0,0.55) 100%),
+    linear-gradient(to right, var(--logo-text) 5%, rgba(0, 0, 0, 0) 25%,
+                    rgba(0, 0, 0, 0) 75%, var(--logo-text) 95%),
+    linear-gradient(to bottom, var(--logo-text) 20%, rgba(64, 64, 64, 0.4)),
     url("../../public/hero-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -109,14 +110,14 @@
 }
 
 .hero h1 {
-  color: #ffffff;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
   max-width: 560px;
   margin: 0;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  color: #f5f5f4;
+  text-shadow: #f2f2f2 0px 0px 50px;
 }
 
 .hero h1 span {
@@ -157,7 +158,7 @@
 }
 
 .section h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.025em;
   text-align: center;
@@ -203,92 +204,10 @@
 }
 
 /* =====================
-   TENT CAROUSEL
-   ===================== */
-.carousel {
-  position: relative;
-  width: min(680px, 90%);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid rgba(255,255,255,0.15);
-  /* Extra room for the arrow buttons which sit outside */
-  margin: 0 40px;
-}
-
-.carouselTrack {
-  position: relative;
-  width: 100%;
-  /* height = image + caption area */
-  height: 420px;
-}
-
-.carouselSlide {
-  position: absolute;
-  inset: 0;
-  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-}
-
-.carouselImg {
-  width: 100%;
-  height: 310px;
-  object-fit: cover;
-  display: block;
-  flex-shrink: 0;
-}
-
-.carouselCaption {
-  padding: 20px 24px;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0;
-  flex: 1;
-}
-
-.carouselBtn:hover {
-  background: rgba(255,255,255,0.28);
-}
-
-.carouselBtnPrev {
-  left: 0;
-}
-
-.carouselBtnNext {
-  right: 0;
-}
-
-.carouselDots {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  padding: 0 0 18px;
-}
-
-.carouselDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.25);
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.carouselDotActive {
-  background: var(--accent-yellow);
-  transform: scale(1.3);
-}
-
-/* =====================
    TENT LISTS
    ===================== */
 .section ul {
   width: min(680px, 90%);
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -326,16 +245,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   width: min(760px, 90%);
-  /* border: 1px solid rgba(255,255,255,0.12); */
   border-radius: 10px;
   overflow: hidden;
 }
 
 .tentsList {
   list-style: none;
-  /* Generous padding on all sides — fixes the "text at the edge" issue */
   padding: 22px 28px;
-  /* border-right: 1px solid rgba(255,255,255,0.1); */
 }
 
 .tentsList:last-child {
@@ -371,7 +287,7 @@
 .dmuchaniecGrid {
   display: flex;
   flex-direction: column;
-  gap: 12px;          /* clear visual separation between cards */
+  gap: 12px;
   width: min(900px, 92%);
   margin-top: 12px;
 }
@@ -385,12 +301,52 @@
   border: 1px solid var(--border);
 }
 
+.dmuchaniecImgWrap {
+  position: relative;
+  grid-row: 1;
+}
+
+.dmuchaniecImgWrap .dmuchaniecImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dmuchaniecImgWrap .dmuchaniecImage:first-of-type {
+  position: relative;
+}
+
 .dmuchaniecImage {
   width: 100%;
-  /* fixed height on desktop — large enough to see the slide */
   height: 240px;
   object-fit: cover;
   display: block;
+}
+
+.dmuchaniecDots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+}
+
+.dmuchaniecDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+.dmuchaniecDotActive {
+  background: #fff;
+  transform: scale(1.3);
 }
 
 .dmuchaniecBody {
@@ -564,44 +520,12 @@
   .section h2,
   .header,
   .headerDark {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .section > p {
     font-size: 15px;
     text-align: left;
-  }
-
-  /* Carousel */
-  .carousel {
-    width: 100%;
-    margin: 0;
-  }
-
-  .carouselTrack {
-    height: auto;
-    min-height: 360px;
-  }
-
-  .carouselSlide {
-    position: absolute;
-    inset: 0;
-  }
-
-  .carouselImg {
-    /* Taller on mobile so the slide actually shows properly */
-    height: 260px;
-  }
-
-  .carouselTrack {
-    height: 370px;
-  }
-
-  .carouselBtn {
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
-    margin: 0;
   }
 
   /* Tent lists */
@@ -614,8 +538,6 @@
   .tentsList {
     border-right: none;
     margin-bottom: 24px;
-    /* border-bottom: 1px solid rgba(255,255,255,0.1); */
-    /* Keep the same generous padding on mobile */
     padding: 18px 24px;
   }
 
@@ -634,7 +556,6 @@
   }
 
   .dmuchaniecImage {
-    /* Taller image on mobile so you see the full slide */
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
@@ -666,137 +587,4 @@
   .nav { justify-content: center; }
   .navLinks { width: 100%; }
   .hero h1 { font-size: 22px; }
-}
-
-.dmuchaniecImgWrap {
-  position: relative;
-  grid-row: 1;
-}
-
-.dmuchaniecImgWrap .dmuchaniecImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Pierwszy img nadaje wymiary wrapperowi */
-.dmuchaniecImgWrap .dmuchaniecImage:first-of-type {
-  position: relative;
-}
-
-.dmuchaniecDots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 1;
-}
-
-.dmuchaniecDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.45);
-  transition: background 0.3s ease, transform 0.3s ease;
-  display: block;
-}
-
-.dmuchaniecDotActive {
-  background: #fff;
-  transform: scale(1.3);
-}
-
-.tentGallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  width: min(900px, 92%);
-}
-
-.tentCard {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.tentCaption {
-  padding: 16px 20px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(250,250,248,0.65);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .tentGallery {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-}
-
-.cardCarousel {
-  width: min(600px, 92%);
-  border-radius: 12px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.cardCarouselTrack {
-  position: relative;
-}
-
-.cardCarouselSlide {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  transition: opacity 0.5s ease;
-}
-
-/* Pierwszy slide nadaje wysokość tracku */
-.cardCarouselSlide:first-child {
-  position: relative;
-}
-
-.cardCarouselImg {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-}
-
-.cardCarouselBody {
-  padding: 18px 22px 14px;
-}
-
-.cardCarouselTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(250,250,248,0.9);
-  margin: 0 0 6px;
-}
-
-.cardCarouselDesc {
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(250,250,248,0.6);
-  margin: 0;
-}
-
-/* Dots — te same klasy co wcześniej, już masz je w CSS */
-
-@media (max-width: 768px) {
-  .cardCarousel {
-    width: 100%;
-  }
-
-  .cardCarouselImg {
-    height: 240px;
-  }
 }
