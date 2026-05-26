@@ -1,71 +1,123 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
+import Carousel from "./carousel.js";
 import { useActiveSection } from "../hooks/useActiveSection";
 
-const tents = [
+const tentSlides = [
   {
     img: "./namiot2.jpg",
-    alt: "Namiot na przyjęcie weselne",
-    desc: "Elegancki namiot cateringowy z szarym wykończeniem. Przestronna konstrukcja idealna na przyjęcia plenerowe, wesela i imprezy firmowe.",
+    alt: "Namiot weselny",
+    desc: "Elegancki namiot z szarym wykończeniem, który sprawdzi się na każdą okazję",
   },
   {
     img: "./namiot3.jpg",
-    alt: "Namiot cateringowy biały",
-    desc: "Profesjonalny namiot cateringowy w białym kolorze. Łatwy montaż w dowolnej lokalizacji — doskonały na imprezy rodzinne i eventy biznesowe.",
+    alt: "Namiot biały",
+    desc: "Biały namiot cateringowy - pomieści nawet kilkadziesiąt osób, a jego neutralna stylistyka pasuje do każdej dekoracji.",
+  },
+  {
+    img: "./namiot4.jpg",
+    alt: "Namiot biały",
+    desc: "Namiot cateringowy to komfort niezależnie od pogody - daje cień, chroni przed deszczem i tworzy wyjątkowy klimat każdego przyjęcia.",
+  },
+];
+
+const interiorSlides = [
+  {
+    img: "./wnetrze1.jpg",
+    alt: "Stolik kawowy",
+    desc: "<strong>Stolik kawowy z warnikiem i zastawą</strong><br/>Czyli strefa kawowa dla Twoich gości",
+  },
+  {
+    img: "./wnetrze2.jpg",
+    alt: "Zastawa stołowa",
+    desc: "<strong>Pełna opcja (obrusy, pokrowce, zastawa)</strong><br/>Wszystko, czego potrzebujesz w jednym miejscu. Stoły z obrusami, krzesła w eleganckich pokrowcach i kompletna zastawa stołowa",
+  },
+  {
+    img: "./wnetrze3.jpg",
+    alt: "Stoły bez zastawy",
+    desc: "<strong>Obrusy i pokrowce (bez zastawy) </strong><br/>Zadbany wygląd stołów i krzeseł bez przepłacania za zbędne dodatki",
+  },
+  {
+    img: "./wnetrze4.jpg",
+    alt: "Stoły bez obrusów",
+    desc: "<strong>Same stoły i krzesła</strong><br/>Podstawowy zestaw dla tych, którzy mają własną dekorację lub zastawę.",
+  },
+  {
+    img: "./wnetrze5.jpeg",
+    alt: "Stoły bez obrusów",
+    desc: "<strong>Same stoły i krzesła</strong><br/>Solidne stoły i wygodne krzesła - tyle, ile potrzeba, bez niczego zbędnego",
   },
 ];
 
 const inflatables = [
   {
+    id: "labirynt",
+    name: "Labirynt 3w1",
+    imgs: ["./dmuchaniec_labirynt.jpeg", "./dmuchaniec_labirynt2.jpeg", "./dmuchaniec_labirynt3.jpg"],
+    alt: "Dmuchaniec Labirynt",
+    wymiary: "7 × 6 m",
+    wysokosc: "6 m (zjazd 3,1 m)",
+    desc: "Najciekawszy dmuchaniec w ofercie.<br/>3w1 - Zjeżdżalnia, skakaniec i tor przeszkód w jednym",
+  },
+  {
+    id: "torPrzeszkod",
+    name: "Tor Przeszkód",
+    imgs: ["./dmuchaniec_torprzeszkod.jpeg", "./dmuchaniec_torprzeszkod2.jpeg", "./dmuchaniec_torprzeszkod3.jpeg", "./dmuchaniec_torprzeszkod4.jpeg"],
+    alt: "Dmuchaniec Tor przeszkód",
+    wymiary: "12 × 3 m",
+    wysokosc: null,
+    desc: "Wyzwanie dla prawdziwych śmiałków!<br/>Idealny wybór na festyn czy inną imprezę plenerową",
+  },
+  {
     id: "amazonka",
     name: "Amazonka",
-    img: "./dmuchaniec_amazonka.jpg",
+    imgs: ["./dmuchaniec_amazonka.jpg"],
     alt: "Dmuchaniec Amazonka",
     wymiary: "8 × 4,5 m",
     wysokosc: "6 m (zjazd 3,1 m)",
-    desc: "Kolorowa dżungla z drzewami i zwierzakami — idealna zjeżdżalnia dla młodszych i starszych dzieci.",
+    desc: "Kolorowa dżungla z drzewami i zwierzakami<br/>Idealna zjeżdżalnia dla młodszych i starszych dzieci",
   },
   {
     id: "jungle",
     name: "Jungle",
-    img: "./dmuchaniec_jungle.jpg",
+    imgs: ["./dmuchaniec_jungle.jpeg"],
     alt: "Dmuchaniec Jungle",
     wymiary: "9 × 4,5 m",
     wysokosc: "6 m (zjazd 3,1 m)",
-    desc: "Tropikalna przygoda w sercu dżungli — zjeżdżalnia z papugami i dzikimi zwierzętami.",
+    desc: "Tropikalna przygoda w sercu dżungli<br/>Zjeżdżalnia z papugami i dzikimi zwierzętami",
   },
   {
     id: "krokodyl",
     name: "Krokodyl",
-    img: "./dmuchaniec_krokodyl.jpg",
+    imgs: ["./dmuchaniec_krokodyl.jpg"],
     alt: "Dmuchaniec Krokodyl",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Ogromny krokodyl ze stromym ślizgiem — przyciąga wzrok i daje mnóstwo frajdy!",
+    desc: "Ogromny krokodyl ze stromym ślizgiem<br/>Przyciąga wzrok i daje mnóstwo frajdy!",
   },
   {
     id: "minecraft",
     name: "Minecraft",
-    img: "./dmuchaniec_minecraft.jpg",
+    imgs: ["./dmuchaniec_minecraft.jpg"],
     alt: "Dmuchaniec Minecraft",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Duży dmuchaniec idealny dla fanów popularnej gry z blokami.",
+    desc: "Duży dmuchaniec idealny dla fanów popularnej gry z blokami",
   },
   {
     id: "zoo",
     name: "Zoo",
-    img: "./dmuchaniec_zoo.jpg",
+    imgs: ["./dmuchaniec_zoo.jpg"],
     alt: "Dmuchaniec Zoo",
     wymiary: "9 × 4,5 m",
     wysokosc: "7 m (zjazd 3,6 m)",
-    desc: "Zjeżdżalnia z całym wesołym zoo — lew, zebra i słoń czekają na zabawę!",
+    desc: "Zjeżdżalnia z całym wesołym zoo<br/>Lew, zebra i słoń czekają na zabawę!",
   },
   {
     id: "lego",
     name: "Lego",
-    img: "./dmuchaniec_lego.jpg",
+    imgs: ["./dmuchaniec_lego.jpg"],
     alt: "Dmuchaniec Lego",
     wymiary: "5 × 5 m",
     wysokosc: "4 m",
@@ -74,29 +126,46 @@ const inflatables = [
   {
     id: "zoo_skok",
     name: "Zoo do skakania",
-    img: "./dmuchaniec_zoo_skok.jpg",
+    imgs: ["./dmuchaniec_zoo_skok.jpg","./dmuchaniec_zoo_skok2.jpeg","./dmuchaniec_zoo_skok3.jpeg"],
     alt: "Dmuchaniec Zoo do skakania",
     wymiary: "6 × 6 m",
     wysokosc: null,
-    desc: "Kolorowa arena z figurkami zwierząt — świetna zabawa dla maluchów bez zjeżdżalni.",
+    desc: "Kolorowa arena z figurkami zwierząt<br/>Świetna zabawa dla maluchów, bez zjeżdżalni",
   },
   {
     id: "boisko",
     name: "Boisko",
-    img: "./dmuchaniec_boisko.jpg",
+    imgs: ["./dmuchaniec_boisko.jpg"],
     alt: "Dmuchane boisko do piłki nożnej",
     wymiary: "6 × 11 m",
     wysokosc: null,
-    desc: "Dmuchane boisko do piłki nożnej — idealne jako dodatek do zjeżdżalni. Bezpieczna rywalizacja i dużo śmiechu!",
+    desc: "Dmuchane boisko do piłki nożnej<br/>Idealne jako dodatek do zjeżdżalni. Bezpieczna rywalizacja i dużo śmiechu!",
   },
 ];
 
 export default function Home() {
   const activeSection = useActiveSection();
-  const [currentTent, setCurrentTent] = useState(0);
 
-  const prevTent = () => setCurrentTent((i) => (i - 1 + tents.length) % tents.length);
-  const nextTent = () => setCurrentTent((i) => (i + 1) % tents.length);
+  const allItems = [...inflatables];
+
+  const [activeImgs, setActiveImgs] = useState(
+    () => Object.fromEntries(allItems.map(item => [item.id, 0]))
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImgs(prev => {
+        const next = { ...prev };
+        allItems.forEach(item => {
+          if (item.imgs.length > 1) {
+            next[item.id] = (prev[item.id] + 1) % item.imgs.length;
+          }
+        });
+        return next;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className={styles.page}>
@@ -125,52 +194,21 @@ export default function Home() {
         {/* SEKCJA 1 — O NAS */}
         <section className={styles.section} id="planujesz_impreze">
           <h2 className={styles.headerDark}>Planujesz imprezę?</h2>
-          <p>Zapewniamy wynajem namiotów cateringowych wraz z pełnym wyposażeniem dla 20 do 200 osób. Oferujemy profesjonalną obsługę, nowoczesny sprzęt z 2024 i 2025 roku oraz niezapomniane atrakcje na każdą okazję.</p>
-          <p>Obsługujemy całe woj. świętokrzyskie — Kielce, Chęciny, Morawicę, Masłów, Zagnańsk, Daleszyce i okolice. Nasz sprzęt przywozimy, montujemy i odbieramy sami.</p>
-          <p>📅 Zapraszamy do rezerwacji na 2025 rok &nbsp;·&nbsp; 📌 Wolne terminy na wakacje!</p>
+          <p>Zapewniamy wynajem namiotów cateringowych wraz z pełnym wyposażeniem dla 20 do 200 osób. Oferujemy profesjonalną obsługę, nowoczesny sprzęt z 2025 i 2026 roku oraz niezapomniane atrakcje na każdą okazję.</p>
+          <p>Obsługujemy całe woj. świętokrzyskie - Kielce, Chęciny, Morawicę, Masłów, Zagnańsk, Daleszyce i okolice. Nasz sprzęt przywozimy, montujemy i odbieramy sami.</p>
+          <p>📅 Zapraszamy do rezerwacji na 2026 rok &nbsp;·&nbsp; 📌 Wolne terminy na wakacje!</p>
         </section>
 
         {/* SEKCJA 2 — NAMIOTY */}
         <section className={styles.section} id="namioty">
           <h2 className={styles.header}>Namioty cateringowe</h2>
           <p>Wynajmujemy namioty cateringowe dla 20 do 200 osób. Wszystkie namioty są nowe, wykonane z materiałów najwyższej jakości, odporne na deszcz i wiatr.</p>
-          <p>Dostępne w różnych rozmiarach i konfiguracjach — z bokami lub bez, z podłogą, oświetleniem girlandowym i innymi dodatkami. Przyjeżdżamy, montujemy i odbieramy wszystko sami.</p>
+          <p>Dostępne w różnych rozmiarach i konfiguracjach - z bokami lub bez, z podłożem, oświetleniem girlandowym i innymi dodatkami. Przyjeżdżamy, montujemy i odbieramy wszystko sami.</p>
           <p className={styles.coloredText}>Montaż, demontaż oraz girlandowe oświetlenie — GRATIS</p>
 
           {/* KARUZELA NAMIOTÓW */}
-          <div className={styles.carousel}>
-            <div className={styles.carouselTrack}>
-              {tents.map((tent, i) => (
-                <div
-                  key={i}
-                  className={styles.carouselSlide}
-                  style={{ transform: `translateX(${(i - currentTent) * 100}%)` }}
-                  aria-hidden={i !== currentTent}
-                >
-                  <img src={tent.img} alt={tent.alt} className={styles.carouselImg} />
-                  <p className={styles.carouselCaption}>{tent.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <button className={`${styles.carouselBtn} ${styles.carouselBtnPrev}`} onClick={prevTent} aria-label="Poprzedni namiot">
-              ‹
-            </button>
-            <button className={`${styles.carouselBtn} ${styles.carouselBtnNext}`} onClick={nextTent} aria-label="Następny namiot">
-              ›
-            </button>
-
-            <div className={styles.carouselDots}>
-              {tents.map((_, i) => (
-                <button
-                  key={i}
-                  className={`${styles.carouselDot} ${i === currentTent ? styles.carouselDotActive : ''}`}
-                  onClick={() => setCurrentTent(i)}
-                  aria-label={`Namiot ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+          <Carousel items={tentSlides} interval={6000} />
+          <Carousel items={interiorSlides} interval={6000} />
 
           <p>Dostępne białe namioty z eleganckim szarym wykończeniem:</p>
           <ul>
@@ -200,8 +238,6 @@ export default function Home() {
             <ul className={styles.tentsList}>
               <li>Dodatkowe opcje</li>
               <li>Podłoże ze sztucznej trawy</li>
-              <li>Catering</li>
-              <li>Profesjonalne nagłośnienie i oświetlenie</li>
               <li>Animacje</li>
             </ul>
           </div>
@@ -215,7 +251,30 @@ export default function Home() {
           <div className={styles.dmuchaniecGrid}>
             {inflatables.map((item) => (
               <div key={item.id} className={styles.dmuchaniecCard}>
-                <img src={item.img} alt={item.alt} className={styles.dmuchaniecImage} />
+                <div className={styles.dmuchaniecImgWrap}>
+                  {item.imgs.map((src, i) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt={item.alt}
+                      className={styles.dmuchaniecImage}
+                      style={{
+                        opacity: i === activeImgs[item.id] ? 1 : 0,
+                        transition: "opacity 0.6s ease",
+                      }}
+                    />
+                  ))}
+                  {item.imgs.length > 1 && (
+                    <div className={styles.dmuchaniecDots}>
+                      {item.imgs.map((_, i) => (
+                        <span
+                          key={i}
+                          className={`${styles.dmuchaniecDot} ${i === activeImgs[item.id] ? styles.dmuchaniecDotActive : ""}`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <div className={styles.dmuchaniecBody}>
                   <h3 className={styles.dmuchaniecName}>{item.name}</h3>
                   <div className={styles.dmuchaniecMeta}>
@@ -228,7 +287,10 @@ export default function Home() {
                       </span>
                     )}
                   </div>
-                  <p className={styles.dmuchaniecDesc}>{item.desc}</p>
+                  <p
+                  className={styles.dmuchaniecDesc}
+                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                  />
                 </div>
               </div>
             ))}
@@ -238,7 +300,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer} id="footer">
-        <p>Wakacyjna Przygoda to lokalna firma z pasją do dobrej zabawy. Nasz sprzęt jest nowy (roczniki 2024/2025), obsługa szybka i punktualna, a ceny uczciwe. Zadowolenie klienta to dla nas priorytet — dlatego zawsze oferujemy montaż w cenie i elastyczne terminy.</p>
+        <p>Wakacyjna Przygoda to lokalna firma z pasją do dobrej zabawy. Nasz sprzęt jest nowy (roczniki 2025/2026), obsługa szybka i punktualna, a ceny uczciwe. Zadowolenie klienta to dla nas priorytet — dlatego zawsze oferujemy montaż w cenie i elastyczne terminy.</p>
         <div className={styles.footerDivider} />
         <div className={styles.footerContainer}>
           <div className={styles.footerContent}>
@@ -250,11 +312,16 @@ export default function Home() {
             <a href="mailto:wakacyjnaprzygoda22@gmail.com">wakacyjnaprzygoda22@gmail.com</a>
           </div>
           <div className={styles.footerContent}>
-            <p className={styles.footerLabel}>Facebook</p>
-            <a href="https://www.facebook.com/profile.php?id=100083137700568" target="_blank" rel="noopener">Wakacyjna Przygoda</a>
+            <p className={styles.footerLabel}>Social media</p>
+            <div>
+              <a style={{ marginRight: 16 }} href="https://www.facebook.com/profile.php?id=100083137700568" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/wakacyjna_przygoda.official" target="_blank" rel="noopener">Instagram</a>
+            </div>
+
+
           </div>
         </div>
-        <p className={styles.footerCopyright}>📍 Kielce, woj. Świętokrzyskie &nbsp;·&nbsp; Wakacyjna Przygoda © 2025</p>
+        <p className={styles.footerCopyright}>📍 Kielce, woj. Świętokrzyskie &nbsp;·&nbsp; Wakacyjna Przygoda © 2026</p>
       </footer>
     </div>
   );
