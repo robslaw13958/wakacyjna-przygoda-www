@@ -238,7 +238,6 @@ export default function Home() {
             <ul className={styles.tentsList}>
               <li>Dodatkowe opcje</li>
               <li>Podłoże ze sztucznej trawy</li>
-              <li>Catering</li>
               <li>Animacje</li>
             </ul>
           </div>
