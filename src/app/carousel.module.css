@@ -25,6 +25,10 @@
   flex-shrink: 0;
 }
 
+.cardCarouselTall .cardCarouselImg {
+  height: 640px;
+}
+
 .cardCarouselBody {
   padding: 18px 22px 14px;
   display: flex;
@@ -77,5 +81,11 @@
 
   .cardCarouselImg {
     height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardCarouselTall .cardCarouselImg {
+    height: 56vh;
   }
 }

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import styles from "./carousel.module.css";
 
-export default function Carousel({ items, interval = 4000 }) {
+export default function Carousel({ items, interval = 4000, tall = false }) {
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function Carousel({ items, interval = 4000 }) {
     }, [items.length, interval]);
 
     return (
-        <div className={styles.cardCarousel}>
+        <div className={`${styles.cardCarousel} ${tall ? styles.cardCarouselTall : ""}`}>
             <div className={styles.cardCarouselTrack}>
                 {items.map((item, i) => (
                     <div

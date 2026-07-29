@@ -50,6 +50,29 @@ const interiorSlides = [
   },
 ];
 
+const additions = [
+  {
+    img: "./kostkarka.jpg",
+    alt: "Kostkarka do lodu",
+    desc: "Kostkarka do lodu ",
+  },
+  {
+    img: "./maszynaDoGranity.jpg",
+    alt: "Maszyna do granity i slushy",
+    desc: "Maszyna do napojów mrożonych typu granita i slushy",
+  },
+  {
+    img: "./maszynaDoWaty.jpg",
+    alt: "Maszyna do waty",
+    desc: "Maszyna do waty",
+  },
+  {
+    img: "./lodowka.jpg",
+    alt: "Lodówka",
+    desc: "Lodówka",
+  }
+];
+
 const inflatables = [
   {
     id: "labirynt",
@@ -241,6 +264,7 @@ export default function Home() {
               <li>Animacje</li>
             </ul>
           </div>
+          <Carousel items={additions} interval={6000} tall />
         </section>
 
         {/* SEKCJA 3 — DMUCHAŃCE */}
